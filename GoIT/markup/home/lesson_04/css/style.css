@@ -114,7 +114,6 @@ body {
 	float: left;
 	background: #fff url("../img/mainContentBackground.png") repeat-y;
 	width: 100%;
-	box-shadow: 0 0 10px rgba(0,0,0,0.9);
 }
 .info {
 	float: left;
@@ -145,10 +144,14 @@ body {
 	text-align: center;
 	padding: 3px;
 }
+.clear {
+	clear: both;
+}
 /* FOOTER */
 .footer p {
 	color: #ffffff;
 	font-family: Tahoma;
 	font-size: 12px;
 	text-align: center;
+	padding: 10px;
 }
