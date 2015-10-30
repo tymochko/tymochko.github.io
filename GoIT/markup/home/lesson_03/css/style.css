@@ -1,0 +1,143 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #f9f9f9;
+}
+.container {
+	width: 968px;
+	margin: 0 auto;
+	padding: 0 46px 60px;
+	background: #fff;
+	box-shadow: 0 -1px 10px #000;
+}
+/* Header */
+.header {
+	font-size: 0;
+}
+.header img {
+	padding: 52px 0 41px;
+}
+.nav {
+	background: #444343;
+	/* gradient feature doesn't seem to be working */
+	background: linear-gradient (to top, #444343, #5e5e5e);
+}
+.nav li {
+	display: inline-block;
+	padding-top: 14px;
+	padding-bottom: 16px;
+	list-style: none;
+	text-shadow: 1px 1px 1px rgba(0,0,0, 0.5);
+	font-family: "Open Sans" sans-serif;
+	font-size: 15px;
+}
+.nav li:first-child {
+	padding-left: 25px;
+	padding-right: 72px;
+}
+.nav li:nth-child(2) {
+	padding-left: 25px;
+	padding-right: 30px;
+	background: #2e2e2e;
+	/* gradient feature doesn't seem to be working */
+	background: linear-gradient (to top, #2e2e2e, #4a4a4a);
+	border-left: 1px solid #838383;
+	border-right: 1px solid #838383;
+}
+.nav li:nth-child(3) {
+	padding-left: 65px;
+	padding-right: 48px;
+}
+.nav li:last-child {
+	padding-left: 48px;
+}
+.nav a {
+	color: #fff;
+	text-decoration: none;
+}
+/* Main container with Left Menu and Content */
+.main-container {
+	margin-top: 40px;
+}
+.left-menu {
+	float: left;
+	width: 25%;
+	border: 1px solid #c8c8c8;
+}
+.left-menu li {
+	list-style: none;
+	padding: 15px;
+	padding-left: 25px;
+	border-bottom: 1px solid #c8c8c8;
+}
+.left-menu li:last-child {
+	border-bottom: none;
+}
+.left-menu li a {
+	text-decoration: none;
+	font-family: "Open Sans" sans-serif;
+	font-size: 13px;
+	color: #656363;
+}
+/*Instead of active tab*/
+.left-menu li:nth-child(3) {
+	padding-left: 35px;
+	background-color: #f9f9f9; /* Doesn't seems to display that color. Even thou all other colors works fine */
+}
+.rightContent {
+	float: right;
+	width: 67%;
+}
+.rightContent .imgBox {
+	text-align: center;
+	border: 1px solid #c8c8c8;
+}
+.rightContent p {
+	margin: 40px 25px 64px;
+	color: #2c2c2c;
+	font-family: "Open Sans" sans-serif;
+	font-size: 13px;
+}
+.clear {
+	clear: both;
+}
+/*FOOTER*/
+.footer {
+	background: #e1e1e1;
+}
+.footer li {
+	display: inline-block;
+	padding-top: 14px;
+	padding-bottom: 16px;
+	list-style: none;
+	text-shadow: 1px 1px 1px rgba(0,0,0, 0.5);
+	font-family: "Open Sans" sans-serif;
+	font-size: 13px;
+}
+.footer li:first-child {
+	padding-left: 25px;
+	padding-right: 72px;
+}
+.footer li:nth-child(2) {
+	padding-left: 25px;
+	padding-right: 30px;
+	text-decoration: underline;
+}
+.footer li:nth-child(3) {
+	padding-left: 65px;
+	padding-right: 48px;
+}
+.footer li:nth-child(4) {
+	padding-left: 48px;
+}
+.footer li:last-child {
+	float: right;
+	margin-right: 26px;
+	text-shadow: none;
+}
+.footer a {
+	color: #2c2c2c;
+	text-decoration: none;
+}
