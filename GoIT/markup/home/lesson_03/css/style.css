@@ -21,70 +21,80 @@ body {
 }
 .nav {
 	background: #444343;
-	/* gradient feature doesn't seem to be working */
-	background: linear-gradient (to top, #444343, #5e5e5e);
+	background: linear-gradient(90deg, #444343, #5e5e5e);
 }
 .nav li {
 	display: inline-block;
-	padding-top: 14px;
-	padding-bottom: 16px;
 	list-style: none;
 	text-shadow: 1px 1px 1px rgba(0,0,0, 0.5);
-	font-family: "Open Sans" sans-serif;
+	font-family: "Open Sans", sans-serif;
 	font-size: 15px;
+	border: none;
+	overflow: hidden;
 }
-.nav li:first-child {
+.nav a {
+	display: block;
+	padding-top: 14px;
+	padding-bottom: 16px;
+}
+.nav li:first-child a {
 	padding-left: 25px;
 	padding-right: 72px;
 }
-.nav li:nth-child(2) {
+.nav li:nth-child(2) a {
 	padding-left: 25px;
 	padding-right: 30px;
-	background: #2e2e2e;
-	/* gradient feature doesn't seem to be working */
-	background: linear-gradient (to top, #2e2e2e, #4a4a4a);
-	border-left: 1px solid #838383;
-	border-right: 1px solid #838383;
 }
-.nav li:nth-child(3) {
+.nav li:nth-child(3) a {
 	padding-left: 65px;
 	padding-right: 48px;
 }
-.nav li:last-child {
+.nav li:last-child a {
 	padding-left: 48px;
+	padding-right: 48px;
+}
+.nav li:hover {
+	background: #2e2e2e;
+	background: linear-gradient(90deg, #2e2e2e, #4a4a4a);
+	border-left: 1px solid #838383;
+	border-right: 1px solid #838383;
+	margin-left: -1px;
+	margin-right: -1px;
 }
 .nav a {
 	color: #fff;
 	text-decoration: none;
 }
 /* Main container with Left Menu and Content */
-.main-container {
+.mainContainer {
 	margin-top: 40px;
 }
-.left-menu {
+.leftMenu {
 	float: left;
 	width: 25%;
 	border: 1px solid #c8c8c8;
 }
-.left-menu li {
+.leftMenu li {
 	list-style: none;
-	padding: 15px;
-	padding-left: 25px;
 	border-bottom: 1px solid #c8c8c8;
 }
-.left-menu li:last-child {
+.leftMenu a {
+	display: block;
+}
+.leftMenu li:last-child {
 	border-bottom: none;
 }
-.left-menu li a {
+.leftMenu li a {
+	padding: 15px;
+	padding-left: 25px;
 	text-decoration: none;
-	font-family: "Open Sans" sans-serif;
+	font-family: "Open Sans", sans-serif;
 	font-size: 13px;
 	color: #656363;
 }
-/*Instead of active tab*/
-.left-menu li:nth-child(3) {
+.leftMenu li:hover {
 	padding-left: 35px;
-	background-color: #f9f9f9; /* Doesn't seems to display that color. Even thou all other colors works fine */
+	background-color: #f9f9f9;
 }
 .rightContent {
 	float: right;
@@ -97,7 +107,7 @@ body {
 .rightContent p {
 	margin: 40px 25px 64px;
 	color: #2c2c2c;
-	font-family: "Open Sans" sans-serif;
+	font-family: "Open Sans", sans-serif;
 	font-size: 13px;
 }
 .clear {
@@ -106,6 +116,7 @@ body {
 /*FOOTER*/
 .footer {
 	background: #e1e1e1;
+	position: relative;
 }
 .footer li {
 	display: inline-block;
@@ -113,7 +124,7 @@ body {
 	padding-bottom: 16px;
 	list-style: none;
 	text-shadow: 1px 1px 1px rgba(0,0,0, 0.5);
-	font-family: "Open Sans" sans-serif;
+	font-family: "Open Sans", sans-serif;
 	font-size: 13px;
 }
 .footer li:first-child {
@@ -132,10 +143,13 @@ body {
 .footer li:nth-child(4) {
 	padding-left: 48px;
 }
-.footer li:last-child {
-	float: right;
-	margin-right: 26px;
+.footer p {
+	position: absolute;
+	top: 14px;
+	right: 26px;
 	text-shadow: none;
+	font-family: "Open Sans", sans-serif;
+	font-size: 13px;
 }
 .footer a {
 	color: #2c2c2c;
