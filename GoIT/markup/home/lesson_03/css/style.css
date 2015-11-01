@@ -1,6 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	font-family: "Open Sans", sans-serif;
 }
 body {
 	background: #f9f9f9;
@@ -21,16 +22,17 @@ body {
 }
 .nav {
 	background: #444343;
-	background: linear-gradient(90deg, #444343, #5e5e5e);
+	background: linear-gradient(0deg, #444343, #5e5e5e);
 }
 .nav li {
 	display: inline-block;
 	list-style: none;
 	text-shadow: 1px 1px 1px rgba(0,0,0, 0.5);
-	font-family: "Open Sans", sans-serif;
 	font-size: 15px;
 	border: none;
 	overflow: hidden;
+	border-left: 1px solid rgba(131, 131, 131, 0);
+	border-right: 1px solid rgba(131, 131, 131, 0);
 }
 .nav a {
 	display: block;
@@ -55,11 +57,9 @@ body {
 }
 .nav li:hover {
 	background: #2e2e2e;
-	background: linear-gradient(90deg, #2e2e2e, #4a4a4a);
-	border-left: 1px solid #838383;
-	border-right: 1px solid #838383;
-	margin-left: -1px;
-	margin-right: -1px;
+	background: linear-gradient(0deg, #2e2e2e, #4a4a4a);
+	border-left: 1px solid rgba(131, 131, 131, 1);
+	border-right: 1px solid rgba(131, 131, 131, 1);
 }
 .nav a {
 	color: #fff;
@@ -88,7 +88,6 @@ body {
 	padding: 15px;
 	padding-left: 25px;
 	text-decoration: none;
-	font-family: "Open Sans", sans-serif;
 	font-size: 13px;
 	color: #656363;
 }
@@ -107,7 +106,6 @@ body {
 .rightContent p {
 	margin: 40px 25px 64px;
 	color: #2c2c2c;
-	font-family: "Open Sans", sans-serif;
 	font-size: 13px;
 }
 .clear {
@@ -124,7 +122,6 @@ body {
 	padding-bottom: 16px;
 	list-style: none;
 	text-shadow: 1px 1px 1px rgba(0,0,0, 0.5);
-	font-family: "Open Sans", sans-serif;
 	font-size: 13px;
 }
 .footer li:first-child {
@@ -148,7 +145,6 @@ body {
 	top: 14px;
 	right: 26px;
 	text-shadow: none;
-	font-family: "Open Sans", sans-serif;
 	font-size: 13px;
 }
 .footer a {
