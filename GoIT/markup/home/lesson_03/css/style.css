@@ -36,33 +36,14 @@ body {
 }
 .nav a {
 	display: block;
-	padding-top: 14px;
-	padding-bottom: 16px;
-}
-.nav li:first-child a {
-	padding-left: 25px;
-	padding-right: 72px;
-}
-.nav li:nth-child(2) a {
-	padding-left: 25px;
-	padding-right: 30px;
-}
-.nav li:nth-child(3) a {
-	padding-left: 65px;
-	padding-right: 48px;
-}
-.nav li:last-child a {
-	padding-left: 48px;
-	padding-right: 48px;
+	padding: 14px 30px 16px;
+	color: #fff;
+	text-decoration: none;
 }
 .nav li:hover {
 	background: #2e2e2e;
 	background: linear-gradient(0deg, #2e2e2e, #4a4a4a);
-	border-color: rgba(131, 131, 131, 1);
-}
-.nav a {
-	color: #fff;
-	text-decoration: none;
+	border-color: #838383;
 }
 /* Main container with Left Menu and Content */
 .mainContainer {
@@ -117,26 +98,13 @@ body {
 }
 .footer li {
 	display: inline-block;
-	padding-top: 14px;
-	padding-bottom: 16px;
 	list-style: none;
 	text-shadow: 1px 1px 1px rgba(0,0,0, 0.5);
 	font-size: 13px;
 }
-.footer li:first-child a {
-	padding-left: 25px;
-	padding-right: 72px;
-}
-.footer li:nth-child(2) a {
-	padding-left: 25px;
-	padding-right: 30px;
-}
-.footer li:nth-child(3) a {
-	padding-left: 65px;
-	padding-right: 48px;
-}
-.footer li:nth-child(4) a {
-	padding-left: 48px;
+.footer li a {
+	display: block;
+	padding: 14px 30px 16px;
 }
 .footer li:hover {
 	text-decoration: underline;
