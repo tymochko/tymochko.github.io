@@ -3,7 +3,7 @@
 	padding: 0;
 }
 body {
-	background: #21a3bd url("../img/background.jpg") 0 0 repeat;
+	background: #0c739f url("../img/background.jpg") 0 0 repeat-x;
 }
 .site-body {
 	margin: 0 auto;
