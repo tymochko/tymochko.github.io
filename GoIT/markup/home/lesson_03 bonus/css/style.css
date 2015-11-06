@@ -6,7 +6,7 @@
 body {
   margin: 0 auto;
   width: 960px;
-  background: #000000 url("../img/background.jpg") center 0 no-repeat;
+  background: #000 url("../img/background.jpg") 50% 0 no-repeat;
 }
 h2, h3, p, a {
   font-weight: normal;
