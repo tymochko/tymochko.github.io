@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-spacing: 0;
+}
+td {
+  border-right: 9px solid #000;
+  border-bottom: 9px solid #000;
+}
+.row1 {
+  height: 49px;
+}
+.row2, .row3 {
+  height: 130px;
+}
+.row4 {
+  height: 61px;
+}
+.row5 {
+  height: 57px;
+}
+.row6 {
+  height: 28px;
+}
+.row7 {
+  height: 31px;
+}
+.col1 {
+  width: 47px;
+}
+.col2 {
+  width: 59px;
+}
+.col3 {
+  width: 60px;
+}
+.col4 {
+  width: 128px;
+}
+.col5, .col6 {
+  width: 75px;
+}
+/* very ugly hack STARTS here*/
+.row6>.col2 {
+  border-bottom: 0;
+}
+.row7>.col2 {
+  border-right: 0;
+}
+/* very ugly hack ENDS here*/
+.row1>.col5 {
+  background: yellow;
+}
+.row2>.col2 {
+  background: red;
+}
+.row2>.col5 {
+  background: yellow;
+}
+.row4>.col2 {
+  background: black;
+}
+.row5>.col1 {
+  background: yellow;
+}
+.row5>.col5 {
+  background: blue;
+}
+.row6>.col4 {
+  background: black;
+}
+/* purging outline borders */
+.row5>.col1, .row7>.col2, .row7>.col3, .row7>.col4 {
+  border-bottom: 0;
+}
+.row1>.col5, .row2>.col5, .row3>.col6, .row4>.col5, .row5>.col5, .row7>.col4 {
+  border-right: 0;
+}
