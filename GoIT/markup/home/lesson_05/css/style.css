@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('fonts/helveticaneue-thin-webfont.eot');
+    src: url('fonts/helveticaneue-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/helveticaneue-thin-webfont.woff2') format('woff2'),
+         url('fonts/helveticaneue-thin-webfont.woff') format('woff'),
+         url('fonts/helveticaneue-thin-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 14px;
+}
+a {
+  display: block;
+  color: #60b5ed;
+  text-decoration: none;
+  list-style: none;
+}
+/* HEADER */
+.header {
+  background: #074f8f url("../img/menu_bg.png") 0 0 repeat;
+  
+}
+.menu {
+  float: right;
+  font-size: 0;
+}
+.header {
+  position: relative;
+}
+.header li {
+  display: inline-block;
+}
+.header a {
+  padding: 11px 13px 14px;
+}
+.header a:hover {
+  background-color: #4eabda;
+  color: #ffffff;
+}
+.userMenu {
+  float: right;
+  margin-right: 20px;
+  font-size: 0;
+}
+.flag {
+  position: relative;
+}
+.flag img {
+  float: left;
+  position: relative;
+  top: -3px;
+  margin-right: 10px;
+}
+.userMenu:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  margin: 2px 0;
+  border: 1px solid #56a2dc;
+  border-width: 0 0 0 1px;
+}
+.userMenu a {
+  color: #ffffff;
+}
+.fancyBg {
+  background: #4299d2;
+  background: linear-gradient(to top, rgba(46,122,196,1) 0%,rgba(81,177,220,1) 100%);
+  
+}
+.fancyBg li:first-child a {
+  padding-right: 0;
+}
+.fancyBg li:last-child a {
+  padding-left: 4px;
+}
+.fancyBg a:hover span{
+  text-decoration: underline;
+}
+.header:after {
+  content: "";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+/* JUMBOTRON */
+.jumbotron {
+  position: relative;
+  background: #a0bfd1 url("../img/background.jpg") center /cover no-repeat;
+  height: 100vh;
+  color: #ffffff;
+}
+.loginForm {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 613px;
+  width: 560px;
+  text-align: center;
+}
+.loginForm h3 {
+  line-height: 61px;
+  font-weight: normal;
+  font-size: 24px;
+  margin-bottom: 2px;
+  background: rgba(0, 0, 0, 0.63);
+}
+.formsList {
+  position: relative;
+  background: rgba(0, 0, 0, 0.63);
+  padding: 36px 0 21px;
+}
+.formsList a {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+.formsList p {
+  margin-top: 24px;
+  margin-bottom: 29px;
+  font-size: 14px;
+  color: #999999;
+}
+.formsList p:before, p:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  top: 105px;
+  left: 142px;
+  height: 1px;
+  width: 123px;
+  background-color: #666666;
+  border: 1px solid #000000;
+  border-width: 0 0 1px 0;  
+}
+.formsList p:after {
+  left: 295px;
+}
+/* FORMS LIST */
+.form {
+  margin: 0 auto;
+}
+input {
+  background: #000;
+  /* For some reason height is adding to current height and width is lisghtly wider */
+  width: 276px;
+  margin: 8px 0;
+  padding: 16px 0 12px 12px;
+  border-width: 0;
+  border-bottom: 1px solid #494949;
+  color: #ccc;
+}
+input:focus {
+  background-color: #1b5288;
+  outline: 0;
+  border-bottom: 1px solid #689bcc;
+  box-shadow: 0 0 9px 3px #4d88b0, inset 0 0 5px 2px rgba(29, 26, 22, 0.2), inset 0 0 2px rgba(0, 0, 0, 0.1);
+}
+.newsletter input {
+  width: 13px;
+  margin: 20px 0 23px -41px;
+}
+.createAccount {
+  width: auto; 
+  margin: 0 0 20px;
+  padding: 9px 20px;
+  font-size: 14px; 
+  background: linear-gradient(to top, rgba(46,122,196,1) 0%,rgba(81,177,220,1) 100%);
+  box-shadow: inset 0px 1px 1px rgba(103,198,230,0.6);
+  border: 1px solid rgb(66, 153, 210);
+  /*border-image: linear-gradient(to top, rgb(66, 153, 210) 0%, rgb(101, 168, 228) 100%); It's overlaping border-radius*/
+  border-radius: 2px;
+  color: #fff; 
+  cursor: pointer;
+}
+.policy {
+  width: 401px;
+  margin: 0 auto;
+}
