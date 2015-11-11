@@ -93,8 +93,11 @@ body {
 }
 /*FOOTER*/
 .footer {
+	overflow: hidden;
 	background: #e1e1e1;
-	position: relative;
+}
+.footer ul {
+	float: left;
 }
 .footer li {
 	display: inline-block;
@@ -110,9 +113,8 @@ body {
 	text-decoration: underline;
 }
 .footer p {
-	position: absolute;
-	top: 14px;
-	right: 26px;
+	float: right;
+	margin: 15px 25px 0 0;
 	text-shadow: none;
 	font-size: 13px;
 }
