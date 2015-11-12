@@ -8,11 +8,11 @@
 <body>
   <div class="header">
     <ul class="userMenu">
-      <li><a class="flag" href="#minhasOfertas"><img src="img/flag_icon.png" alt="">Minhas Ofertas</a></li>
+      <li><img src="img/flag_icon.png" alt=""><a class="flag" href="#minhasOfertas">Minhas Ofertas</a></li>
       <li class="fancyBg">
         <ul>
-          <li><a href="#entrar">Ola! <span>Entrar</span></a></li>
-          <li><a href="#cadastre">ou <span>Cadastre-se</span></a></li>
+          <li>Ola! <a href="#entrar">Entrar</a></li>
+          <li>ou <a href="#cadastre">Cadastre-se</a></li>
         </ul>
       </li>
     </ul>
@@ -25,41 +25,42 @@
     </ul>
   </div>
   <div class="jumbotron">
-    <div class="loginForm">
-      <h3>Cadastre-se</h3>
-      <div class="formsList">
-        <a href="#login_fb_button"><img src="img/login_fb_button.png" alt="login_fb_button"></a>
-        <p>OU</p>
-        <form class="form" action="#">
-          <div>
-            <input type="text" name="first_name" required placeholder="First Name">
-          </div>
-          <div>
-            <input type="text" name="last_name" required placeholder="Last Name">
-          </div>
-          <div>
-            <input type="email" name="email" required placeholder="Email Address">
-          </div>
-          <div>
-            <input type="password" name="password" required placeholder="Choose Password">
-          </div>
-          <div>
-            <input type="password" name="password" required placeholder="Password Confirm">
-          </div>
-          <div class="newsletter">
-            <input type="checkbox" id="newsletter">
-            <label for="newsletter">Send me Youbike updates and tips</label>
-          </div>
-          <div>
-            <input class="createAccount" type="submit" value="Create my Account">
-          </div>
-          <div class="policy">
-            <span>By clicking the button above, you agree to the Terms of Service
-            Xiew our Privacy Policy.</span>
-          </div>
-        </form>
+    <div class="wrapper">
+      <div class="loginForm">
+        <h3>Cadastre-se</h3>
+        <div class="formsList">
+          <a href="#login_fb_button"><img src="img/login_fb_button.png" alt="login_fb_button"></a>
+          <div class="ou">OU</div>
+          <form class="form" action="#">
+            <div>
+              <input type="text" name="first_name" required placeholder="First Name">
+            </div>
+            <div>
+              <input type="text" name="last_name" required placeholder="Last Name">
+            </div>
+            <div>
+              <input type="email" name="email" required placeholder="Email Address">
+            </div>
+            <div>
+              <input type="password" name="password" required placeholder="Choose Password">
+            </div>
+            <div>
+              <input type="password" name="password" required placeholder="Password Confirm">
+            </div>
+            <div class="newsletter">
+              <input type="checkbox" id="newsletter">
+              <label for="newsletter">Send me Youbike updates and tips</label>
+            </div>
+            <div>
+              <input class="createAccount" type="submit" value="Create my Account">
+            </div>
+            <div class="policy">
+              By clicking the button above, you agree to the Terms of Service
+              Xiew our Privacy Policy.
+            </div>
+          </form>
+        </div>        
       </div>
-      
     </div>
   </div>
 </body>

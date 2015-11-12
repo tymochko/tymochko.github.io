@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'Helvetica Neue';
-    src: url('fonts/helveticaneue-thin-webfont.eot');
-    src: url('fonts/helveticaneue-thin-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/helveticaneue-thin-webfont.woff2') format('woff2'),
-         url('fonts/helveticaneue-thin-webfont.woff') format('woff'),
-         url('fonts/helveticaneue-thin-webfont.ttf') format('truetype');
+    src: url('../fonts/helveticaneue-thin-webfont.eot');
+    src: url('../fonts/helveticaneue-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helveticaneue-thin-webfont.woff2') format('woff2'),
+         url('../fonts/helveticaneue-thin-webfont.woff') format('woff'),
+         url('../fonts/helveticaneue-thin-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -15,15 +15,14 @@
   font-size: 14px;
 }
 a {
-  display: block;
   color: #60b5ed;
   text-decoration: none;
   list-style: none;
+  line-height: 40px;
 }
 /* HEADER */
 .header {
   background: #074f8f url("../img/menu_bg.png") 0 0 repeat;
-  
 }
 .menu {
   float: right;
@@ -36,11 +35,18 @@ a {
   display: inline-block;
 }
 .header a {
-  padding: 11px 13px 14px;
+  padding: 12px 13px 14px;
 }
 .header a:hover {
   background-color: #4eabda;
   color: #ffffff;
+}
+.header:after {
+  content: "";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
 }
 .userMenu {
   float: right;
@@ -50,11 +56,12 @@ a {
 .flag {
   position: relative;
 }
-.flag img {
+.userMenu li img {
   float: left;
-  position: relative;
-  top: -3px;
-  margin-right: 10px;
+  margin: 7px 10px 0 20px;
+}
+.flag a {
+  padding: 0;
 }
 .userMenu:before {
   content: "";
@@ -71,43 +78,38 @@ a {
   color: #ffffff;
 }
 .fancyBg {
+  padding: 0 12px 0 14px;
   background: #4299d2;
   background: linear-gradient(to top, rgba(46,122,196,1) 0%,rgba(81,177,220,1) 100%);
-  
+  color: #fff;
 }
-.fancyBg li:first-child a {
-  padding-right: 0;
-}
-.fancyBg li:last-child a {
-  padding-left: 4px;
+.fancyBg a {
+  padding: 0;
 }
 .fancyBg a:hover span{
   text-decoration: underline;
 }
-.header:after {
-  content: "";
-  visibility: hidden;
-  display: block;
-  height: 0;
-  clear: both;
-}
 /* JUMBOTRON */
 .jumbotron {
-  position: relative;
-  background: #a0bfd1 url("../img/background.jpg") center /cover no-repeat;
+  display: table;
+  background: #a0bfd1 url("../img/background.jpg") 50% no-repeat;
+  background-size: cover;
   height: 100vh;
-  color: #ffffff;
+  width: 100%;
+  color: #fff;
+}
+.wrapper {
+  display: table;
+  height: 100vh;
+  margin: 0 auto;
 }
 .loginForm {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  display: table-cell;
   margin: auto;
   height: 613px;
   width: 560px;
   text-align: center;
+  vertical-align: middle;
 }
 .loginForm h3 {
   line-height: 61px;
@@ -122,18 +124,17 @@ a {
   padding: 36px 0 21px;
 }
 .formsList a {
-  display: inline-block;
   margin: 0;
   padding: 0;
   font-size: 0;
 }
-.formsList p {
-  margin-top: 24px;
-  margin-bottom: 29px;
+.ou {
+  margin-top: 7px;
+  margin-bottom: 18px;
   font-size: 14px;
   color: #999999;
 }
-.formsList p:before, p:after {
+.ou:before, .ou:after {
   content: "";
   display: inline-block;
   position: absolute;
@@ -146,7 +147,7 @@ a {
   border: 1px solid #000000;
   border-width: 0 0 1px 0;  
 }
-.formsList p:after {
+.ou:after {
   left: 295px;
 }
 /* FORMS LIST */
@@ -169,7 +170,7 @@ input:focus {
   border-bottom: 1px solid #689bcc;
   box-shadow: 0 0 9px 3px #4d88b0, inset 0 0 5px 2px rgba(29, 26, 22, 0.2), inset 0 0 2px rgba(0, 0, 0, 0.1);
 }
-.newsletter input {
+input[type="checkbox"] {
   width: 13px;
   margin: 20px 0 23px -41px;
 }
