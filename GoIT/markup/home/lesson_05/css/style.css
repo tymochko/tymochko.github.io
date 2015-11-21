@@ -35,7 +35,7 @@ a {
   display: inline-block;
 }
 .header a {
-  padding: 12px 13px 14px;
+  padding: 12px 13px 12px;
 }
 .header a:hover {
   background-color: #4eabda;
