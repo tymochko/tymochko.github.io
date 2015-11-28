@@ -1,5 +1,5 @@
-var base = prompt("Enter your number", '');
-var exponent = prompt("Enter degree for your number", '');
+var base = prompt("Enter your number");
+var exponent = prompt("Enter degree for your number");
 
 function pow(base, exponent) {
   var result = 1;
