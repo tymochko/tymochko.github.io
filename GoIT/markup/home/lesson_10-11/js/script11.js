@@ -16,7 +16,7 @@ for (var i = 0; i < arrayOfNames.length; i++) {
   }
 }
   
-if (checkUserName == true) {
+if (checkUserName) {
   alert (userName + ', вы успешно вошли');
 } else {
   alert ('Sorry, we could not find your name in our database');
