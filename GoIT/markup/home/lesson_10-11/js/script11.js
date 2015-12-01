@@ -1,21 +1,22 @@
 var arrayOfNames = [];
+var nameForArray;
 
 for (var i = 0; i < 5; i++) {
-  var nameForArray = prompt ('Please enter name for array (' + (i + 1) + ' of 5)');
+  nameForArray = prompt('Please enter name for array (' + i + 1 + ' of 5)');
   arrayOfNames.push(nameForArray);
   console.log(arrayOfNames);  
 }
 
-var userName = prompt ('Please enter user name');
-var checkUserName;
+var userName = prompt('Please enter user name');
+var checkUserName = false;
 
 for (var i = 0; i < arrayOfNames.length; i++) {
   if (arrayOfNames[i] == userName) {
-    checkUserName = userName;
+    checkUserName = true;
   }
 }
   
-if (checkUserName == userName) {
+if (checkUserName == true) {
   alert (userName + ', вы успешно вошли');
 } else {
   alert ('Sorry, we could not find your name in our database');
