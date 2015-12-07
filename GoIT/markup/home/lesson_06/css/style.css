@@ -1,13 +1,13 @@
 *
 {
-  font-family: 'Lucida Sans Unicode', sans-serif;
-
   margin: 0;
   padding: 0;
 }
 
 body
 {
+  font-family: 'Lucida Sans Unicode', sans-serif;
+
   width: 908px;
   margin: 0 auto;
   padding-top: 17px;
@@ -821,8 +821,7 @@ main
   float: left;
 
   width: 518px;
-  height: 619px;
-  padding: 8px 0 0 9px;
+  padding: 8px 0 13px 9px;
 
   border-radius: 5px;
   background-image: linear-gradient(to top, rgba(35, 75, 93, .49) 0%, rgba(201, 207, 209, .49) 100%);
@@ -831,10 +830,12 @@ main
 .tire-type
 {
   display: inline-block;
-
-  margin: 0 12px 16px;
-
+  margin: 8px 13px 10px;
   text-align: center;
+  width: 138px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-height: 12px;
 }
 
 .tire-link
@@ -851,34 +852,19 @@ main
   font-size: 15px;
 
   color: #206988;
+  white-space: nowrap;
 }
 
-.tire-link-brand:after
+.tire-link-subbrand
 {
-  display: block;
-  visibility: hidden;
-
-  height: 0;
-  margin: -12px 0;
-
-  content: '';
-}
-
-.tire-link-subbrand:after
-{
-  display: block;
-  visibility: hidden;
-
-  height: 0;
-  margin: -4px 0;
-
-  content: '';
+  white-space: nowrap;
+  letter-spacing: -0.3px;
 }
 
 .tire-img-wrapper
 {
   display: inline-block;
-  
+
   width: 138px;
   height: 127px;
 
