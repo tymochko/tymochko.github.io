@@ -14,11 +14,11 @@
     <div class="form">
       <img src="img/user-icon.png" alt="user icon">
       <form class="login-form">
-        <input type="text" name="login" required="" placeholder="логин">
-        <input type="password" name="password" required="" placeholder="пароль">
-        <input id="submit" type="submit" value="вход | регистрация">
+        <input class="login-form__input" type="text" name="login" required="" placeholder="логин">
+        <input class="login-form__input" type="password" name="password" required="" placeholder="пароль">
+        <a class="registration" href="#registration">вход | регистрация</a>
       </form>
-      <a href="#forgot-password">забыли пароль?</a>
+      <a class="forgot-password" href="#forgot-password">забыли пароль?</a>
     </div>
     <div class="user-links">
       <a href="#home-icon"><img class="home-icon" src="img/home-icon.png" alt="home icon" /></a>
@@ -29,7 +29,7 @@
   <div class="logo">
     <img src="img/logo.jpg" alt="zazor logo tire">
   </div>
-  <menu>
+  <div class="menu">
     <nav>
       <ul>
         <li><a href="#o-kompanii">О КОМПАНИ</a></li>
@@ -43,7 +43,7 @@
       <p>товаров:</p>
       <p>на сумму:</p>
     </div>
-  </menu>
+  </div>
   <div class="search">
     <div class="search-by-car">
       <h5 class="search-header">Поиск по автомобилю</h5>
@@ -51,90 +51,90 @@
         <div class="search-block">
           <h6 class="search-block-header">Диски:</h6>
           <div class="search-block-parameter">
-            <p class="search-block-parameter-name">Марка <span>авто:</span></p>
-            <select class="search-block-parameter-select">
-              <option></option>
-              <option>Ford</option>
-              <option>Renault</option>
-              <option>Tesla</option>
-              <option>Toyota</option>
-              <option>Volkswagen</option>
+            <label class="search-block-parameter-name" for="car-brand">Марка <span>авто:</span></label>
+            <select class="search-block-parameter-select" id="car-brand">
+              <option selected disabled></option>
+              <option value="car-brand-ford">Ford</option>
+              <option value="car-brand-renault">Renault</option>
+              <option value="car-brand-tesla">Tesla</option>
+              <option value="car-brand-toyota">Toyota</option>
+              <option value="car-brand-volkswagen">Volkswagen</option>
             </select>
           </div>
           <div class="search-block-parameter">
-            <p class="search-block-parameter-name two-row-name">Модель <span>автомобиля:</span></p>
-            <select class="search-block-parameter-select">
+            <label class="search-block-parameter-name two-row-name" for="car-model">Модель <span>автомобиля:</span></label>
+            <select class="search-block-parameter-select" id="car-model">
               <option></option>
-              <option>Модель 1</option>
-              <option>Модель 2</option>
-              <option>Модель 3</option>
-              <option>Модель 4</option>
-              <option>Модель 5</option>
+              <option value="car-model-01">Модель 1</option>
+              <option value="car-model-02">Модель 2</option>
+              <option value="car-model-03">Модель 3</option>
+              <option value="car-model-04">Модель 4</option>
+              <option value="car-model-05">Модель 5</option>
             </select>
           </div>
           <div class="search-block-parameter">
-            <p class="search-block-parameter-name two-row-name">Год выпуска <span>автомобиля:</span></p>
-            <select class="search-block-parameter-select narrow-width">
+            <label class="search-block-parameter-name two-row-name" for="car-age">Год выпуска <span>автомобиля:</span></label>
+            <select class="search-block-parameter-select narrow-width" id="car-age">
               <option></option>
-              <option>до 1990</option>
-              <option>до 2000</option>
-              <option>до 2010</option>
-              <option>після 2010</option>
+              <option value="before-1990">до 1990</option>
+              <option value="before-2000">до 2000</option>
+              <option value="before-2010">до 2010</option>
+              <option value="after-2010">після 2010</option>
             </select>
           </div>
           <div class="search-block-parameter">
-            <p class="search-block-parameter-name">Комплектация:</p>
-            <select class="search-block-parameter-select">
+            <label class="search-block-parameter-name" for="trim-level">Комплектация:</label>
+            <select class="search-block-parameter-select" id="trim-level">
               <option></option>
-              <option>Базова</option>
-              <option>Середня</option>
-              <option>Топ</option>
-              <option>Преміум</option>
+              <option value="trim-level-base">Базова</option>
+              <option value="trim-level-medium">Середня</option>
+              <option value="trim-level-top">Топ</option>
+              <option value="trim-level-premium">Преміум</option>
             </select>
           </div>
         </div>
         <div class="search-block">
           <h6 class="search-block-header right-align-header">Шины:</h6>
           <div class="search-block-parameter">
-            <p class="search-block-parameter-name">Марка <span>авто:</span></p>
-            <select class="search-block-parameter-select">
+            <label class="search-block-parameter-name" for="car-brand">Марка <span>авто:</span></label>
+            <select class="search-block-parameter-select" id="car-brand">
               <option></option>
-              <option>Ford</option>
-              <option>Renault</option>
-              <option>Tesla</option>
-              <option>Toyota</option>
-              <option>Volkswagen</option>
+              <option value="car-brand-ford">Ford</option>
+              <option value="car-brand-renault">Renault</option>
+              <option value="car-brand-tesla">Tesla</option>
+              <option value="car-brand-toyota">Toyota</option>
+              <option value="car-brand-volkswagen">Volkswagen</option>
             </select>
           </div>
           <div class="search-block-parameter">
-            <p class="search-block-parameter-name two-row-name">Модель <span>автомобиля:</span></p>
-            <select class="search-block-parameter-select">
+            <label class="search-block-parameter-name two-row-name" for="car-model">Модель <span>автомобиля:</span></label>
+            <select class="search-block-parameter-select" id="car-model">
               <option></option>
-              <option>Модель 1</option>
-              <option>Модель 2</option>
-              <option>Модель 3</option>
-              <option>Модель 4</option>
-              <option>Модель 5</option>
+              <option value="car-model-01">Модель 1</option>
+              <option value="car-model-02">Модель 2</option>
+              <option value="car-model-03">Модель 3</option>
+              <option value="car-model-04">Модель 4</option>
+              <option value="car-model-05">Модель 5</option>
             </select>
           </div>
           <div class="search-block-parameter">
-            <p class="search-block-parameter-name two-row-name">Год выпуска <span>автомобиля:</span></p>
-            <select class="search-block-parameter-select narrow-width">
+            <label class="search-block-parameter-name two-row-name" for="car-age">Год выпуска <span>автомобиля:</span></label>
+            <select class="search-block-parameter-select narrow-width" id="car-age">
               <option></option>
-              <option>до 1990</option>
-              <option>до 2000</option>
-              <option>до 2010</option>
-              <option>після 2010</option>
+              <option value="before-1990">до 1990</option>
+              <option value="before-2000">до 2000</option>
+              <option value="before-2010">до 2010</option>
+              <option value="after-2010">після 2010</option>
             </select>
           </div>
           <div class="search-block-parameter">
-            <p class="search-block-parameter-name">Комплектация:</p>
-            <select class="search-block-parameter-select">
+            <label class="search-block-parameter-name" for="trim-level">Комплектация:</label>
+            <select class="search-block-parameter-select" id="trim-level">
               <option></option>
-              <option>Базова</option>
-              <option>Середня</option>
-              <option>Топ</option>
-              <option>Преміум</option>
+              <option value="trim-level-base">Базова</option>
+              <option value="trim-level-medium">Середня</option>
+              <option value="trim-level-top">Топ</option>
+              <option value="trim-level-premium">Преміум</option>
             </select>
           </div>
         </div>
@@ -146,34 +146,34 @@
       <form class="search-form" action="#" method="get">
         <div class="search-block">
           <div class="search-block-parameter">
-            <p class="search-block-parameter-name">Размер:</p>
-            <select class="search-block-parameter-select">
-              <option>145</option>
-              <option>150</option>
-              <option>155</option>
-              <option>160</option>
-              <option>165</option>
-              <option>170</option>
+            <label class="search-block-parameter-name" for="tire-size-width">Размер:</label>
+            <select class="search-block-parameter-select" id="tire-size-width">
+              <option value="tire-size-width-145">145</option>
+              <option value="tire-size-width-150">150</option>
+              <option value="tire-size-width-155">155</option>
+              <option value="tire-size-width-160">160</option>
+              <option value="tire-size-width-165">165</option>
+              <option value="tire-size-width-170">170</option>
             </select>
             <span class="slash">/</span>
-            <select class="search-block-parameter-select">
+            <select class="search-block-parameter-select" id="tire-size-profile">
               <option></option>
-              <option>50</option>
-              <option>55</option>
-              <option>60</option>
-              <option>65</option>
-              <option>70</option>
+              <option value="tire-size-profile-50">50</option>
+              <option value="tire-size-profile-55">55</option>
+              <option value="tire-size-profile-60">60</option>
+              <option value="tire-size-profile-65">65</option>
+              <option value="tire-size-profile-70">70</option>
             </select>
           </div>
           <div class="search-block-parameter">
-            <p class="search-block-parameter-name radius-name">R</p>
-            <select class="search-block-parameter-select radius-size">
-              <option>12</option>
-              <option>13</option>
-              <option>14</option>
-              <option>15</option>
-              <option>16</option>
-              <option>17</option>
+            <label class="search-block-parameter-name radius-name" for="tire-size-radius">R</label>
+            <select class="search-block-parameter-select radius-size" id="tire-size-radius">
+              <option value="tire-size-radius-12">12</option>
+              <option value="tire-size-radius-13">13</option>
+              <option value="tire-size-radius-14">14</option>
+              <option value="tire-size-radius-15">15</option>
+              <option value="tire-size-radius-16">16</option>
+              <option value="tire-size-radius-17">17</option>
             </select>
           </div>
           <div class="search-block-parameter">
@@ -202,48 +202,48 @@
       <form class="search-form" action="#" method="get">
         <div class="search-block">
           <div class="search-block-parameter">
-            <p class="search-block-parameter-name">Диаметр <span>диска:</span></p>
-            <select class="search-block-parameter-select">
-              <option>14</option>
-              <option>15</option>
-              <option>15</option>
-              <option>16</option>
-              <option>16</option>
-              <option>17</option>
+            <label class="search-block-parameter-name" for="disc-d1">Диаметр <span>диска:</span></label>
+            <select class="search-block-parameter-select" id="disc-d1">
+              <option value="disc-d1-14">14</option>
+              <option value="disc-d1-15">15</option>
+              <option value="disc-d1-16">15</option>
+              <option value="disc-d1-17">16</option>
+              <option value="disc-d1-17">17</option>
+              <option value="disc-d1-18">18</option>
             </select>
           </div>
           <div class="search-block-parameter">
-            <p class="search-block-parameter-name">Количество <span>крепёжных отверстий:</span></p>
-            <select class="search-block-parameter-select">
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
+            <label class="search-block-parameter-name" for="disc-fixture-no">Количество <span>крепёжных отверстий:</span></label>
+            <select class="search-block-parameter-select" id="disc-fixture-no">
+              <option value="disc-fixture-no-3">3</option>
+              <option value="disc-fixture-no-4">4</option>
+              <option value="disc-fixture-no-5">5</option>
             </select>
           </div>
           <div class="search-block-parameter">
-            <p class="search-block-parameter-name">Диаметр <span>расположения крепёжных отверстий:</span></p>
-            <select class="search-block-parameter-select">
-              <option>12</option>
-              <option>13</option>
-              <option>14</option>
+            <label class="search-block-parameter-name" for="disc-d2">Диаметр <span>расположения крепёжных отверстий:</span></label>
+            <select class="search-block-parameter-select" id="disc-d2">
+              <option value="disc-d2-12">12</option>
+              <option value="disc-d2-13">13</option>
+              <option value="disc-d2-14">14</option>
             </select>
           </div>
         </div>
         <div class="search-block search-block-aside">
           <div class="search-block-parameter">
-            <p class="search-block-parameter-name">ДЦО <span>(диаметр центрального отверстия):</span></p>
-            <select class="search-block-parameter-select">
-              <option>12</option>
-              <option>13</option>
-              <option>14</option>
+            <label class="search-block-parameter-name" for="disc-dco">ДЦО <span>(диаметр центрального отверстия):</span></label>
+            <select class="search-block-parameter-select" id="disc-dco">
+              <option value="disc-dco-12">12</option>
+              <option value="disc-dco-13">13</option>
+              <option value="disc-dco-14">14</option>
             </select>
           </div>
           <div class="search-block-parameter">
-            <p class="search-block-parameter-name">ЕТ <span>(вылет диска):</span></p>
-            <select class="search-block-parameter-select">
-              <option>12</option>
-              <option>13</option>
-              <option>14</option>
+            <label class="search-block-parameter-name" for="disc-et">ЕТ <span>(вылет диска):</span></label>
+            <select class="search-block-parameter-select" id="disc-et">
+              <option value="disc-et-12">12</option>
+              <option value="disc-et-13">13</option>
+              <option value="disc-et-14">14</option>
             </select>
           </div>
         </div>
@@ -260,37 +260,37 @@
       <div class="catalogue-container">
         <div class="product-heading">
           <img src="img/section-icon.png" alt="section icon">
-          <h4>ШИНЫ</h4>        
+          <h4>ШИНЫ</h4>
         </div>
         <ul>
-          <li><span><a href="#naimenovanie-1">Наименование 1</a></span></li>
-          <li><span><a href="#naimenovanie-2">Наименование 2</a></span></li>
-          <li><span><a href="#naimenovanie-3">Наименование 3</a></span></li>
-          <li><span><a href="#naimenovanie-4">Наименование 4</a></span></li>
+          <li><a href="#naimenovanie-1">Наименование 1</a></li>
+          <li><a href="#naimenovanie-2">Наименование 2</a></li>
+          <li><a href="#naimenovanie-3">Наименование 3</a></li>
+          <li><a href="#naimenovanie-4">Наименование 4</a></li>
         </ul>
       </div>
       <div class="catalogue-container">
         <div class="product-heading">
           <img src="img/section-icon.png" alt="section icon">
-          <h4>ДИСКИ</h4>        
+          <h4>ДИСКИ</h4>
         </div>
         <ul>
-          <li><span><a href="#naimenovanie-1">Наименование 1</a></span></li>
-          <li><span><a href="#naimenovanie-2">Наименование 2</a></span></li>
-          <li><span><a href="#naimenovanie-3">Наименование 3</a></span></li>
-          <li><span><a href="#naimenovanie-4">Наименование 4</a></span></li>
+          <li><a href="#naimenovanie-1">Наименование 1</a></li>
+          <li><a href="#naimenovanie-2">Наименование 2</a></li>
+          <li><a href="#naimenovanie-3">Наименование 3</a></li>
+          <li><a href="#naimenovanie-4">Наименование 4</a></li>
         </ul>
       </div>
       <div class="catalogue-container">
         <div class="product-heading">
           <img src="img/section-icon.png" alt="section icon">
-          <h4>БОЛТЫ</h4>        
+          <h4>БОЛТЫ</h4>
         </div>
         <ul>
-          <li><span><a href="#naimenovanie-1">Наименование 1</a></span></li>
-          <li><span><a href="#naimenovanie-2">Наименование 2</a></span></li>
-          <li><span><a href="#naimenovanie-3">Наименование 3</a></span></li>
-          <li><span><a href="#naimenovanie-4">Наименование 4</a></span></li>
+          <li><a href="#naimenovanie-1">Наименование 1</a></li>
+          <li><a href="#naimenovanie-2">Наименование 2</a></li>
+          <li><a href="#naimenovanie-3">Наименование 3</a></li>
+          <li><a href="#naimenovanie-4">Наименование 4</a></li>
         </ul>
       </div>
     </div>
@@ -299,9 +299,7 @@
         <a class="tire-link" href="#goodyear-ultra-grip-extreme">
           <span class="tire-link-brand">Goodyear</span>
           <span class="tire-link-subbrand">Ultra Grip Extreme</span>
-          <div class="tire-img-wrapper">
-            <img class="tire-img" src="img/goodyear-ultra-grip-extreme.jpg" alt="tire goodyear ultra grip extreme">
-          </div>
+          <span class="tire-img-wrapper"><img class="tire-img" src="img/goodyear-ultra-grip-extreme.jpg" alt="tire goodyear ultra grip extreme"></span>
         </a>
         <p class="tire-price">90.00 грн.</p>
       </div>
@@ -309,9 +307,7 @@
         <a class="tire-link" href="#nokian-hakkapeliitta-r">
           <span class="tire-link-brand">Nokian</span>
           <span class="tire-link-subbrand">Hakkapeliitta R</span>
-          <div class="tire-img-wrapper">
-            <img class="tire-img" src="img/nokian-hakkapeliitta-r.jpg" alt="tire nokian hakkapeliitta r">
-          </div>
+          <span class="tire-img-wrapper"><img class="tire-img" src="img/nokian-hakkapeliitta-r.jpg" alt="tire nokian hakkapeliitta r"></span>
         </a>
         <p class="tire-price">115.00 грн.</p>
       </div>
@@ -319,9 +315,7 @@
         <a class="tire-link" href="#hankook-k-708">
           <span class="tire-link-brand">Hankook</span>
           <span class="tire-link-subbrand">K 708 155/65 R14</span>
-          <div class="tire-img-wrapper">
-            <img class="tire-img" src="img/hankook-k-708.jpg" alt="tire hankook k 708">
-          </div>
+          <span class="tire-img-wrapper"><img class="tire-img" src="img/hankook-k-708.jpg" alt="tire hankook k 708"></span>
         </a>
         <p class="tire-price">393.00 грн.</p>
       </div>
@@ -329,9 +323,7 @@
         <a class="tire-link" href="#goodyear-ultra-grip-extreme">
           <span class="tire-link-brand">Goodyear</span>
           <span class="tire-link-subbrand">Ultra Grip Extreme</span>
-          <div class="tire-img-wrapper">
-            <img class="tire-img" src="img/goodyear-ultra-grip-extreme.jpg" alt="tire goodyear ultra grip extreme">
-          </div>
+          <span class="tire-img-wrapper"><img class="tire-img" src="img/goodyear-ultra-grip-extreme.jpg" alt="tire goodyear ultra grip extreme"></span>
         </a>
         <p class="tire-price">90.00 грн.</p>
       </div>
@@ -339,9 +331,7 @@
         <a class="tire-link" href="#nokian-hakkapeliitta-r">
           <span class="tire-link-brand">Nokian</span>
           <span class="tire-link-subbrand">Hakkapeliitta R</span>
-          <div class="tire-img-wrapper">
-            <img class="tire-img" src="img/nokian-hakkapeliitta-r.jpg" alt="tire nokian hakkapeliitta r">
-          </div>
+          <span class="tire-img-wrapper"><img class="tire-img" src="img/nokian-hakkapeliitta-r.jpg" alt="tire nokian hakkapeliitta r"></span>
         </a>
         <p class="tire-price">115.00 грн.</p>
       </div>
@@ -349,9 +339,7 @@
         <a class="tire-link" href="#hankook-k-708">
           <span class="tire-link-brand">Hankook</span>
           <span class="tire-link-subbrand">K 708 155/65 R14</span>
-          <div class="tire-img-wrapper">
-            <img class="tire-img" src="img/hankook-k-708.jpg" alt="tire hankook k 708">
-          </div>
+          <span class="tire-img-wrapper"><img class="tire-img" src="img/hankook-k-708.jpg" alt="tire hankook k 708"></span>
         </a>
         <p class="tire-price">393.00 грн.</p>
       </div>
@@ -359,9 +347,7 @@
         <a class="tire-link" href="#goodyear-ultra-grip-extreme">
           <span class="tire-link-brand">Goodyear</span>
           <span class="tire-link-subbrand">Ultra Grip Extreme</span>
-          <div class="tire-img-wrapper">
-            <img class="tire-img" src="img/goodyear-ultra-grip-extreme.jpg" alt="tire goodyear ultra grip extreme">
-          </div>
+          <span class="tire-img-wrapper"><img class="tire-img" src="img/goodyear-ultra-grip-extreme.jpg" alt="tire goodyear ultra grip extreme"></span>
         </a>
         <p class="tire-price">90.00 грн.</p>
       </div>
@@ -369,9 +355,7 @@
         <a class="tire-link" href="#nokian-hakkapeliitta-r">
           <span class="tire-link-brand">Nokian</span>
           <span class="tire-link-subbrand">Hakkapeliitta R</span>
-          <div class="tire-img-wrapper">
-            <img class="tire-img" src="img/nokian-hakkapeliitta-r.jpg" alt="tire nokian hakkapeliitta r">
-          </div>
+          <span class="tire-img-wrapper"><img class="tire-img" src="img/nokian-hakkapeliitta-r.jpg" alt="tire nokian hakkapeliitta r"></span>
         </a>
         <p class="tire-price">115.00 грн.</p>
       </div>
@@ -379,9 +363,7 @@
         <a class="tire-link" href="#hankook-k-708">
           <span class="tire-link-brand">Hankook</span>
           <span class="tire-link-subbrand">K 708 155/65 R14</span>
-          <div class="tire-img-wrapper">
-            <img class="tire-img" src="img/hankook-k-708.jpg" alt="tire hankook k 708">
-          </div>
+          <span class="tire-img-wrapper"><img class="tire-img" src="img/hankook-k-708.jpg" alt="tire hankook k 708"></span>
         </a>
         <p class="tire-price">393.00 грн.</p>
       </div>
@@ -395,7 +377,7 @@
         <div class="catalogue-container">
           <div class="product-heading">
             <img src="img/section-icon.png" alt="section icon">
-            <h4>ШИНЫ</h4>        
+            <h4>ШИНЫ</h4>
           </div>
           <div class="checkbox">
             <input type="checkbox" id="brand-1">
@@ -413,7 +395,7 @@
         <div class="catalogue-container">
           <div class="product-heading">
             <img src="img/section-icon.png" alt="section icon">
-            <h4>ДИСКИ</h4>        
+            <h4>ДИСКИ</h4>
           </div>
           <div class="checkbox">
             <input type="checkbox" id="brand-4">
