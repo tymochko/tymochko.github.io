@@ -1,109 +1,110 @@
-var buttonStart = document.getElementById('button-start');
-
-function switchButtonPause() {
-  buttonStart.textContent = 'PAUSE';
-};
-
-function switchButtonStart() {
-  buttonStart.textContent = 'START';
-};
-
-buttonStart.addEventListener('click', switchButtonPause);
-buttonStart.addEventListener('click', timerId);
-
-var timerMiliseconds;
-
-function timerId() {
-  timerMiliseconds = setInterval(timeChange, 1);
-};
-
 var miliseconds = document.getElementById('miliseconds');
 var seconds = document.getElementById('seconds');
 var minutes = document.getElementById('minutes');
 var hours = document.getElementById('hours');
 
-miliseconds.textContent = '000';
+miliseconds.textContent = '00';
 seconds.textContent = '00';
 minutes.textContent = '00';
 hours.textContent = '00';
 
-miliseconds = +(miliseconds.textContent);
-seconds = +(seconds.textContent);
-minutes = +(minutes.textContent);
-hours = +(hours.textContent);
+var ms = 0;
+var s = 0;
+var m = 0;
+var h = 0;
 
-miliseconds = 0;
+var buttonStart = document.getElementById('button-start');
+
+buttonStart.addEventListener('click', switchButtonPause);
+buttonStart.addEventListener('click', timerId);
+
+function switchButtonPause() {
+  buttonStart.textContent = 'PAUSE';
+  //document.getElementById('button-start').setAttribute('id', 'button-pause');
+};
+
+function switchButtonStart() {
+  buttonStart.textContent = 'START';
+  //document.getElementById('button-pause').setAttribute('id', 'button-start');
+};
+
+// This variable must be global in order to clearInterval in another function
+var timerMiliseconds;
+
+function timerId() {
+  timerMiliseconds = setInterval(timeChange, 10);
+};
 
 function timeChange() {
 
-  miliseconds++;
-  miliseconds.textContent = miliseconds.toString();
+  ms++;
+  if (ms < 10) {
+    miliseconds.textContent = '0' + ms;
+  } else if(ms == 100) {
+    miliseconds.textContent = '00';
+    ms = 0;
+    s++;
+  } else {
+    miliseconds.textContent = ms;
+  };
+
+  if (s < 10) {
+    seconds.textContent = '0' + s;
+  } else if(s == 60) {
+    seconds.textContent = '00';
+    s = 0;
+    m++;
+  } else {
+    seconds.textContent = s;
+  };
+
+    if (m < 10) {
+      minutes.textContent = '0' + m;
+    } else if (m == 60) {
+      minutes.textContent = '00';
+      m = 0;
+      h++;
+    } else {
+      minutes.textContent = m;
+    };
+
+    if (h < 10) {
+      hours.textContent = '0' + h;
+    } else if (h == 24) {
+      hours.textContent = '00';
+      h = 0;
+    } else {
+      hours.textContent = h;
+    };
 
 };
-//  for (var ms = 0; ms < 1000; ms++) {
-//    if (ms < 10) {
-//      miliseconds.textContent = '00' + ms;
-//    } else if (ms >= 100) {
-//      miliseconds.textContent = ms;
-//    } else {
-//      miliseconds.textContent = '0' + ms;
-//    }
-//    ;
-//  };
-//
-//  miliseconds.textContent = '000';
-//
-//  for (var s = 0; s < 60; s++) {
-//    if (s < 10) {
-//      seconds.textContent = '0' + s;
-//    } else {
-//      seconds.textContent = s;
-//    };
-//  };
-//
-//  seconds.textContent = '00';
-//
-//  for (var m = 0; m < 60; m++) {
-//    if (m < 10) {
-//      minutes.textContent = '0' + m;
-//    } else {
-//      minutes.textContent = m;
-//    };
-//  };
-//
-//  minutes.textContent = '00';
-//
-//  for (var h = 0; h < 24; h++) {
-//    if (h < 10) {
-//      hours.textContent = '0' + h;
-//    } else {
-//      hours.textContent = h;
-//    };
-//  };
-//
-//  hours.textContent = '00';
-//};
 
-//function pauseTimer() {
-//  buttonStart.removeEventListener(switchButtonPause);
-//  clearInterval(timerMiliseconds);
-//}
-//
-//var buttonPause = document.getElementById('button-start');
+//var buttonPause = document.getElementById('button-pause');
 //buttonPause.addEventListener('click', pauseTimer);
-
-function clearTimer() {
-  buttonStart.removeEventListener(switchButtonPause);
-  clearInterval(timerMiliseconds);
-
-  hours.textContent = '00';
-  minutes.textContent = '00';
-  seconds.textContent = '00';
-  miliseconds.textContent = '000';
-}
+//
+//function pauseTimer() {
+//  buttonPause.addEventListener('click', switchButtonStart);
+//  //buttonPause.textContent = 'START';
+//  //clearInterval(timerMiliseconds);
+//  //document.getElementById('button-pause').setAttribute('id', 'button-start');
+//};
 
 var buttonClear = document.getElementById('button-clear');
 buttonClear.addEventListener('click', clearTimer);
-buttonClear.addEventListener('click', switchButtonStart);
 
+function clearTimer() {
+  buttonStart.removeEventListener(switchButtonPause);
+  buttonStart.removeEventListener(timerId);
+  buttonStart.textContent = 'START';
+  clearInterval(timerMiliseconds);
 
+  miliseconds.textContent = '00';
+  seconds.textContent = '00';
+  minutes.textContent = '00';
+  hours.textContent = '00';
+
+  ms = 0;
+  s = 0;
+  m = 0;
+  h = 0;
+};
