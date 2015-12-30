@@ -1,7 +1,7 @@
-var miliseconds = document.getElementById('miliseconds');
-var seconds = document.getElementById('seconds');
-var minutes = document.getElementById('minutes');
-var hours = document.getElementById('hours');
+var miliseconds = document.querySelector('.timer-screen__numbers--miliseconds');
+var seconds = document.querySelector('.timer-screen__numbers--seconds');
+var minutes = document.querySelector('.timer-screen__numbers--minutes');
+var hours = document.querySelector('.timer-screen__numbers--hours');
 
 miliseconds.textContent = '00';
 seconds.textContent = '00';
@@ -13,19 +13,19 @@ var s = 0;
 var m = 0;
 var h = 0;
 
-var buttonStart = document.getElementById('button-start');
+var buttonStart = document.querySelector('.button-start');
 
-buttonStart.addEventListener('click', switchButtonPause);
+buttonStart.addEventListener('click', clickButtonPause);
 buttonStart.addEventListener('click', timerId);
 
-function switchButtonPause() {
-  buttonStart.textContent = 'PAUSE';
-  //document.getElementById('button-start').setAttribute('id', 'button-pause');
+function clickButtonPause() {
+  buttonStart.className = buttonStart.className += ' button-disappear';
+  buttonPause.className = buttonPause.className.replace(' button-disappear','');
 };
 
-function switchButtonStart() {
-  buttonStart.textContent = 'START';
-  //document.getElementById('button-pause').setAttribute('id', 'button-start');
+function clickButtonStart() {
+  buttonStart.className = buttonStart.className.replace(' button-disappear', '');
+  buttonPause.className = buttonPause.className += ' button-disappear';
 };
 
 // This variable must be global in order to clearInterval in another function
@@ -79,23 +79,19 @@ function timeChange() {
 
 };
 
-//var buttonPause = document.getElementById('button-pause');
-//buttonPause.addEventListener('click', pauseTimer);
-//
-//function pauseTimer() {
-//  buttonPause.addEventListener('click', switchButtonStart);
-//  //buttonPause.textContent = 'START';
-//  //clearInterval(timerMiliseconds);
-//  //document.getElementById('button-pause').setAttribute('id', 'button-start');
-//};
+var buttonPause = document.querySelector('.button-pause');
+buttonPause.addEventListener('click', pauseTimer);
 
-var buttonClear = document.getElementById('button-clear');
+function pauseTimer() {
+  buttonPause.addEventListener('click', clickButtonStart);
+  clearInterval(timerMiliseconds);
+};
+
+var buttonClear = document.querySelector('.button-clear');
 buttonClear.addEventListener('click', clearTimer);
+buttonClear.addEventListener('click', clickButtonStart);
 
 function clearTimer() {
-  buttonStart.removeEventListener(switchButtonPause);
-  buttonStart.removeEventListener(timerId);
-  buttonStart.textContent = 'START';
   clearInterval(timerMiliseconds);
 
   miliseconds.textContent = '00';

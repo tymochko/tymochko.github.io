@@ -58,6 +58,17 @@ body
   width: 220px;
 }
 
+.button-pause
+{
+  float: left;
+  width: 220px;
+}
+
+.button-disappear
+{
+  display: none;
+}
+
 .button-clear
 {
   float: right;
