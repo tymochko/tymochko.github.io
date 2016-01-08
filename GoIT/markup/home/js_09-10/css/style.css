@@ -1,0 +1,315 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
+
+body
+{
+  font-family: Arial, Helvetica, sans-serif
+}
+
+h1
+{
+  margin: 10px 0;
+}
+
+.site-holder
+{
+  width: 700px;
+  margin: 0 auto;
+}
+
+.nav-wrapper
+{
+  margin: 0 auto;
+  display: table;
+  background: #C2C2C2;
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+/*jCarousel plugin STARTS HERE*/
+
+/*
+This is the visible area of you carousel.
+Set a width here to define how much items are visible.
+The width can be either fixed in px or flexible in %.
+Position must be relative!
+*/
+.jcarousel {
+  position: relative;
+  overflow: hidden;
+  /*custom styles*/
+  width: 600px;
+  margin: 0 auto;
+  border: 10px solid #5F5E5E;
+  border-radius: 5px;
+}
+
+/*
+This is the container of the carousel items.
+You must ensure that the position is relative or absolute and
+that the width is big enough to contain all items.
+*/
+.jcarousel ul {
+  width: 20000em;
+  position: relative;
+
+  /* Optional, required in this case since it's a <ul> element */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+These are the item elements. jCarousel works best, if the items
+have a fixed width and height (but it's not required).
+*/
+.jcarousel li {
+  /* Required only for block elements like <li>'s */
+  float: left;
+}
+
+.jcarousel-pagination
+{
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/*jCarousel plugin ENDS HERE*/
+
+/*custom Select plugin STARTS HERE*/
+
+span.customSelect
+{
+  font-size:11px;
+  background-color: #f5f0de;
+  color:#7c7c7c;
+  padding:5px 7px;
+  border:1px solid #e7dab0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px 5px;
+}
+
+span.customSelect.changed
+{
+  background-color: #f0dea4;
+}
+
+.customSelectInner
+{
+  background:url('../img/customSelect-arrow.gif') no-repeat center right;
+}
+
+.customSelect {
+  /* This is the default class that is used */
+  /* Put whatever custom styles you want here */
+  background: green;
+}
+
+.customSelect.customSelectHover {
+  /* Styles for when the select box is hovered */
+  background: #000;
+  color: #fff;
+}
+
+.customSelect.customSelectOpen {
+  /* Styles for when the select box is open */
+  background: #ffd54e;
+  border-radius: 0;
+}
+
+.customSelect__option
+{
+  background: #ffd54e;
+}
+
+/*custom Select plugin ENDS HERE*/
+
+/*custom checkbox plugin STARTS HERE*/
+
+.niceCheck {
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  cursor: pointer;
+  background: url(../img/checkbox.png);
+}
+.niceCheck input {
+  display: none;
+}
+
+.niceChecked
+{
+  background-position: 0 -17px;
+}
+
+.niceCheck input
+{
+  margin-left: -100px; /* можно задать побольше чтобы наверняка скрыть поле */
+}
+
+.niceCheckDisabled
+{
+  background-image: url(../img/checkbox-disabled.png);
+}
+
+/*custom checkbox plugin ENDS HERE*/
+
+/*custom checkbox CSS method STARTS HERE*/
+
+.custom-css-input
+{
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+.custom-css-label
+{
+  cursor: pointer;
+}
+
+.custom-css-label:after
+{
+  content: " ";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background: url(../img/checkbox-2.png);
+  position: relative;
+  top: 3px;
+  margin-left: 15px;
+}
+
+.custom-css-input:checked + .custom-css-label:after
+{
+  background-position: 0 -17px;
+}
+
+.custom-css-label:hover:after
+{
+  background-position: 0 -34px;
+}
+
+.custom-css-input:checked + .custom-css-label:hover:after
+{
+  background-position: 0 -51px;
+}
+
+/*custom checkbox CSS method ENDS HERE*/
+
+/*Three-level menu with animation STARTS HERE*/
+
+nav {
+  background-color:rgb(255,100,100);
+  padding:10px 0;
+}
+
+nav ul {
+  list-style-type:none;
+  margin:0;
+  padding:0;
+}
+
+nav ul li {
+  display:inline-block;
+  position:relative;
+}
+
+/* sub navigation */
+nav li ul {
+  background-color:#FF6464;
+  position:absolute;
+  left:0;
+  top:40px; /* make this equal to the line-height of the links (specified below) */
+  width:200px;
+}
+
+nav li li {
+  position:relative;
+  margin:0;
+  display:block;
+}
+
+nav li li ul {
+  position:absolute;
+  top:0;
+  left:200px; /* make this equal to the width of the sub nav above */
+  margin:0;
+}
+
+.sub-menu
+{
+  background-color: #FF6464;
+  transition: all 0.7s;
+}
+
+.sub-menu-animated
+{
+  background-color: #CA0030;
+}
+
+/* style all links */
+nav a {
+  line-height:40px;
+  padding:0 12px;
+  margin:0 12px;
+}
+nav a {
+  color:#fff;
+  text-decoration:none;
+  display:block;
+}
+nav a:hover,
+nav a:focus,
+nav a:active {
+  color:rgb(50,50,50);
+}
+
+.dropdown
+{
+  background-color: inherit;
+  transition: all 0.7s;
+}
+
+.dropdown-animated
+{
+  background-color: #CA0030;
+}
+
+/* style sub level links */
+nav li li a {
+  border-bottom:solid 1px rgb(200,50,50);
+  margin:0 10px;
+  padding:0;
+}
+nav li li:last-child a {
+  border-bottom:none;
+}
+
+/* hide sub menu links */
+ul.sub-menu {
+  display:none;
+}
+
+/* show arrows for dropdowns */
+nav li.dropdown > a {
+  background-image:url('../img/arrow-down.png');
+  background-position:right 20px;
+  background-repeat:no-repeat;
+}
+
+nav li li.dropdown > a {
+  background-image:url('../img/arrow-right.png');
+  background-position:right 16px;
+  background-repeat:no-repeat;
+}
+
+/*Three-level menu with animation ENDS HERE*/
+
+footer
+{
+  height: 500px;
+}
