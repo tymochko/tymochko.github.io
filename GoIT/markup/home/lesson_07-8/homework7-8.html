@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>PingbullER</title>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="header">
-    <h1 class="header__name">PINGBULL<span class="header__name__span">ER</span>
-    </h1>
+    <div class="header__name__wrapper">
+      <h1 class="header__name">PINGBULL<span class="header__name__span">ER</span></h1>
+    </div>
     <nav class="header__nav">
       <ul class="header__list">
         <li class="header__list-item header__list-item--wrapper">
@@ -24,14 +24,32 @@
         </li>
       </ul>
     </nav>
+    <div class="nav__inline__wrapper">
+      <nav class="nav__inline header__nav__inline">
+        <ul class="nav__list">
+          <li class="nav__list-item header__nav__list-item"><a class="nav__list-item__link header__nav__list-item__link" href="#home">HOME</a></li>
+          <li class="nav__list-item header__nav__list-item"><a class="nav__list-item__link header__nav__list-item__link" href="#about">ABOUT</a></li>
+          <li class="nav__list-item header__nav__list-item"><a class="nav__list-item__link header__nav__list-item__link" href="#blog">BLOG</a></li>
+          <li class="nav__list-item header__nav__list-item"><a class="nav__list-item__link header__nav__list-item__link" href="#products">PRODUCTS</a></li>
+          <li class="nav__list-item header__nav__list-item"><a class="nav__list-item__link header__nav__list-item__link" href="#lorem">LOREM IPSUM</a></li>
+          <li class="nav__list-item header__nav__list-item header__nav__list-item--last"><a class="nav__list-item__link header__nav__list-item__link" href="#dolor">DOLOR SIT AMET</a></li>
+        </ul>
+      </nav>
+    </div>
     <div class="slider">
-      <div class="slider__content">
-        <a class="slider__content__arrow" href="#slider-arrow"></a>
-        <div class="slider__text-block">
-          <h2 class="slider__text-block__header">Lorem Ipsum Dolor</h2>
-          <p class="slider__text-block__paragraph">IT WILL MAKE ALL OF YOUR DREAMS COME </p>
+      <div class="slider__content__wrapper">
+        <div class="slider__content">
+          <a class="slider__content__arrow" href="#slider-arrow"></a>
+          <div class="slider__text-block">
+            <h2 class="slider__text-block__header">Lorem Ipsum Dolor</h2>
+            <p class="slider__text-block__subheader">IT WILL MAKE ALL OF YOUR DREAMS COME TRUE</p>
+            <p class="slider__text-block__paragraph">Semper sollicitudin gravida eget, vestibulum sit amet sapien. Nunc dignissim tincidunt est, et auctor turpis ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod lacus id semper. In odio nunc, imperdiet eget aliquam quis, euismod id lectus. Nulla interdum arcu et felis aliquam a tempus lectus lobortis.</p>
+          </div>
+          <figure class="slider__photo-block">
+            <img class="slider__photo" src="img/iphone-photo.png" alt="iphone photo">
+          </figure>
+          <a class="slider__content__arrow slider__content__arrow--right" href="#slider-arrow"></a>
         </div>
-        <a class="slider__content__arrow slider__content__arrow--right" href="#slider-arrow"></a>
       </div>
       <div class="slider__content__switcher">
         <a class="slider__content__switcher__button" href="#slider-button"></a>
@@ -43,85 +61,97 @@
   </header>
   <div class="about">
     <div class="about__wrapper">
-      <article class="about__article">
+      <div class="about__article">
         <div class="article__icon">
         </div>
-        <div class="article__text-block">
+        <article class="article__text-block">
           <h3 class="article__text-block__header">ABOUT OUR COMPANY</h3>
-          <p class="article__text-block__paragraph">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus</p>
+          <p class="article__text-block__paragraph">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
           <a class="article__text-block__link" href="read-more">READ MORE</a>
+        </article>
+      </div>
+      <div class="about__article about__article--higher">
+        <div class="article__icon article__icon--bubble">
         </div>
-      </article>
-      <article class="about__article about__article--higher">
-        <div class="article__icon">
-        </div>
-        <div class="article__text-block">
+        <article class="article__text-block">
           <h3 class="article__text-block__header">ABOUT OUR COMPANY</h3>
-          <p class="article__text-block__paragraph">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus</p>
-          <a class="article__text-block__link" href="read-more">READ MORE</a>
+          <p class="article__text-block__paragraph">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
+          <a class="article__text-block__link article__text-block__link--closer" href="read-more">READ MORE</a>
+        </article>
+      </div>
+      <div class="about__article">
+        <div class="article__icon article__icon--note">
         </div>
-      </article>
-      <article class="about__article">
-        <div class="article__icon">
-        </div>
-        <div class="article__text-block">
+        <article class="article__text-block">
           <h3 class="article__text-block__header">ABOUT OUR COMPANY</h3>
-          <p class="article__text-block__paragraph">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus</p>
-          <a class="article__text-block__link" href="read-more">READ MORE</a>
-        </div>
-      </article>
+          <p class="article__text-block__paragraph">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
+          <a class="article__text-block__link article__text-block__link--closer" href="read-more">READ MORE</a>
+        </article>
+      </div>
     </div>
   </div>
   <div class="news">
     <div class="news__wrapper">
-      <article class="news__testimonials">
-        <div class="news__testimonials__body">
-          <img class="news__testimonials__body__img" src="img/news-testimonials-avatar.png" alt="testimonials avatar" />
-          <div class="news__testimonials__body__text-block">
-            <h3 class="news__testimonials__body__text-block__header">PingbulLer</h3>
-            <h3 class="news__testimonials__body__text-block__header news__testimonials__body__text-block__header--colored">starts here</h3>
-            <p class="news__testimonials__body__text-block__paragraph">“Nunc turpis neque, feu-giat eget eleifend et, lacinia non neque. Prae-sent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi conval-lis auctor. Nam vitae</p>
+      <div class="news__wrapper__subwrapper">
+        <div class="news__testimonials">
+          <div class="news__testimonials__body">
+            <img class="news__testimonials__body__img" src="img/news-testimonials-avatar.png" alt="testimonials avatar"/>
+            <div class="news__testimonials__body__text-block">
+              <h3 class="news__testimonials__body__text-block__header">PingbulLer</h3>
+              <h3 class="news__testimonials__body__text-block__header news__testimonials__body__text-block__header--colored">
+                starts here</h3>
+              <p class="news__testimonials__body__text-block__paragraph">“Nunc turpis neque, feugiat eget eleifend et,
+                lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor.
+                Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis
+                neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.”</p>
+            </div>
+            <img class="news__testimonials__body__background-tail" src="img/background-tail.png" alt="background tail"/>
           </div>
+          <nav class="news__testimonials__nav">
+            <div class="slider__content__switcher slider__content__switcher--white">
+              <a class="slider__content__switcher__button slider__content__switcher__button--white"
+                 href="#slider-button"></a>
+              <a class="slider__content__switcher__button slider__content__switcher__button--white"
+                 href="#slider-button"></a>
+              <a class="slider__content__switcher__button slider__content__switcher__button--white"
+                 href="#slider-button"></a>
+              <a class="slider__content__switcher__button slider__content__switcher__button--white"
+                 href="#slider-button"></a>
+            </div>
+          </nav>
         </div>
-        <nav class="news__testimonials__nav">
-          <div class="slider__content__switcher slider__content__switcher--white">
-            <a class="slider__content__switcher__button slider__content__switcher__button--white" href="#slider-button"></a>
-            <a class="slider__content__switcher__button slider__content__switcher__button--white" href="#slider-button"></a>
-            <a class="slider__content__switcher__button slider__content__switcher__button--white" href="#slider-button"></a>
-            <a class="slider__content__switcher__button slider__content__switcher__button--white" href="#slider-button"></a>
+        <div class="blog">
+          <h3 class="blog__header">RECENT UPDATES</h3>
+          <div class="blog__body">
+            <a href="#blog-post-01" class="blog__body__post">
+              <div class="blog__body__post__img">
+              </div>
+              <div class="blog__body__post__text-block">
+                <h4 class="blog__body__post__text-block__header">Nunc turpis neque feugiat eget </h4>
+                <p class="blog__body__post__text-block__paragraph">Posted by Admin on March 13 2012 in Recent News</p>
+              </div>
+            </a>
+            <a href="#blog-post-02" class="blog__body__post blog__body__post--02">
+              <div class="blog__body__post__img blog__body__post__img--post-02">
+              </div>
+              <div class="blog__body__post__text-block">
+                <h4 class="blog__body__post__text-block__header">Nunc turpis neque feugiat eget </h4>
+                <p class="blog__body__post__text-block__paragraph">Posted by Admin on March 13 2012 in Category</p>
+              </div>
+            </a>
+            <a href="#blog-post-03" class="blog__body__post blog__body__post--03">
+              <div class="blog__body__post__img blog__body__post__img--post-03">
+              </div>
+              <div class="blog__body__post__text-block">
+                <h4 class="blog__body__post__text-block__header">Nunc turpis neque feugiat eget </h4>
+                <p class="blog__body__post__text-block__paragraph">Posted by Admin on March 13 2012 in Blog Updates</p>
+              </div>
+            </a>
           </div>
-        </nav>
-      </article>
-      <article class="blog">
-        <h3 class="blog__header">RECENT UPDATES</h3>
-        <div class="blog__body">
-          <a href="#blog-post-01" class="blog__body__post">
-            <div class="blog__body__post__img">
-            </div>
-            <div class="blog__body__post__text-block">
-              <h4 class="blog__body__post__text-block__header">Nunc turpis neque</h4>
-              <p class="blog__body__post__text-block__paragraph">Posted by Admin on March 13</p>
-            </div>
-          </a>
-          <a href="#blog-post-02" class="blog__body__post blog__body__post--02">
-            <div class="blog__body__post__img blog__body__post__img--post-02">
-            </div>
-            <div class="blog__body__post__text-block">
-              <h4 class="blog__body__post__text-block__header">Nunc turpis neque</h4>
-              <p class="blog__body__post__text-block__paragraph">Posted by Admin on March 13</p>
-            </div>
-          </a>
-          <a href="#blog-post-03" class="blog__body__post blog__body__post--03">
-            <div class="blog__body__post__img blog__body__post__img--post-03">
-            </div>
-            <div class="blog__body__post__text-block">
-              <h4 class="blog__body__post__text-block__header">Nunc turpis neque</h4>
-              <p class="blog__body__post__text-block__paragraph">Posted by Admin on March 13</p>
-            </div>
-          </a>
+          <a href="#more-blog-posts" class="blog__more-blog-posts">MORE BLOG POSTS</a>
+          <a href="#read-more-here" class="blog__read-more-here">READ MORE HERE</a>
         </div>
-        <a href="#more-blog-posts" class="blog__more-blog-posts">MORE BLOG POSTS</a>
-      </article>
+      </div>
     </div>
     <div class="news__wrapper news__wrapper--sponsors">
       <div class="sponsors__wrapper">
@@ -133,9 +163,44 @@
         <a href="#sponsors-vonsipper" class="sponsors__link sponsors__link--vonzipper"></a>
       </div>
     </div>
+    <div class="prefooter">
+      <div class="prefooter__wrapper">
+        <div class="prefooter__article-block prefooter__article-block--pigbuller">
+          <h3 class="prefooter__article-block__header prefooter__article-block__header--pigbuller">PIGBULL<span class="prefooter__article-block__header--colored">ER</span></h3>
+          <p class="prefooter__article-block__subheader">Copyright 2013, Pingbull AS</p>
+          <p class="prefooter__article-block__paragraph prefooter__article-block__paragraph--pigbuller">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
+        </div>
+        <div class="prefooter__article-block prefooter__article-block--recent-comments">
+          <h3 class="prefooter__article-block__header">RECENT COMMENTS</h3>
+          <p class="prefooter__article-block__paragraph">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
+        </div>
+        <div class="prefooter__article-block">
+          <h3 class="prefooter__article-block__header">NEWS CATEGORIES</h3>
+          <p class="prefooter__article-block__paragraph">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
+        </div>
+        <div class="prefooter__article-block prefooter__article-block--second">
+          <h3 class="prefooter__article-block__header">NEWS CATEGORIES</h3>
+          <p class="prefooter__article-block__paragraph">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
+        </div>
+        <div class="prefooter__article-block prefooter__article-block--third">
+          <h3 class="prefooter__article-block__header">NEWS CATEGORIES</h3>
+          <p class="prefooter__article-block__paragraph prefooter__article-block__paragraph--third">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
+        </div>
+      </div>
+    </div>
   </div>
   <footer class="footer">
     <div class="footer__wrapper">
+      <nav class="nav__inline nav__inline--footer">
+        <ul class="nav__list">
+          <li class="nav__list-item nav__list-item--footer"><a class="nav__list-item__link nav__list-item__link--footer" href="#home">HOME</a></li>
+          <li class="nav__list-item nav__list-item--footer"><a class="nav__list-item__link nav__list-item__link--footer" href="#about">ABOUT</a></li>
+          <li class="nav__list-item nav__list-item--footer"><a class="nav__list-item__link nav__list-item__link--footer" href="#blog">BLOG</a></li>
+          <li class="nav__list-item nav__list-item--footer"><a class="nav__list-item__link nav__list-item__link--footer" href="#products">PRODUCTS</a></li>
+          <li class="nav__list-item nav__list-item--footer"><a class="nav__list-item__link nav__list-item__link--footer" href="#lorem">LOREM IPSUM</a></li>
+          <li class="nav__list-item nav__list-item--footer"><a class="nav__list-item__link nav__list-item__link--footer" href="#dolor">DOLOR SIT AMET</a></li>
+        </ul>
+      </nav>
       <a href="#signature" class="footer__wrapper__signature">Designed by <span class="footer__wrapper__signature footer__wrapper__signature--bold">Pingbull AS</span></a>
     </div>
   </footer>
