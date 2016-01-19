@@ -5,8 +5,7 @@
       var $unselectedLinks = $('.tabs__list__item__link').not(this);
       $($unselectedLinks).removeClass('tabs__list__item__link--active');
 
-      var $tabNumber = $(this).attr('title');
-      $tabNumber = '#' + $tabNumber;
+      var $tabNumber = $(this).attr('href');
       var $tabId = $($tabNumber);
       $tabId.addClass('tabs__content--active');
 
@@ -14,23 +13,33 @@
       $($unselectedTabContent).removeClass('tabs__content--active');
     });
 
-    $('.form__input').hover(function() {
+    function hintAppear() {
       $(this).next('.form__span').animate({opacity: "show", marginLeft: "10"}, "slow");
+    };
+
+    function hintDisappear() {
+      $(this).next('.form__span').animate({opacity: "hide", marginLeft: "40"}, "fast");
+    };
+
+    var hintTimeout;
+    var $formInput = $('.form__input');
+
+    $formInput.focusin(hintAppear).focusout(hintDisappear);
+    $formInput.hover(function() {
+      var $hint = $(this).next('.form__span');
+      hintTimeout = setTimeout(function() {
+        $hint.animate({opacity: "show", marginLeft: "10"}, "slow");
+      }, 1000);
     },
+
       function() {
+        clearTimeout(hintTimeout);
         $(this).next('.form__span').animate({opacity: "hide", marginLeft: "40"}, "fast");
       });
 
-    $('.form__input').focusin(function() {
-      $(this).next('.form__span').animate({opacity: "show", marginLeft: "10"}, "slow");
-    });
-
-    $('.form__input').focusout(function() {
-      $(this).next('.form__span').animate({opacity: "hide", marginLeft: "40"}, "fast");
-    });
-
-    $('.form__button').click(function() {
+    $('.form__button').click(function(event) {
       $('.form__input').next('.form__span').animate({opacity: "show", marginLeft: "10"}, "slow");
-    })
+      event.preventDefault();
+    });
 
   });
