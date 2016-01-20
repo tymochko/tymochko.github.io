@@ -13,6 +13,8 @@
       $($unselectedTabContent).removeClass('tabs__content--active');
     });
 
+    var $formInput = $('.form__input');
+
     function hintAppear() {
       $(this).next('.form__span').animate({opacity: "show", marginLeft: "10"}, "slow");
     };
@@ -22,19 +24,17 @@
     };
 
     var hintTimeout;
-    var $formInput = $('.form__input');
 
     $formInput.focusin(hintAppear).focusout(hintDisappear);
+
     $formInput.hover(function() {
       var $hint = $(this).next('.form__span');
-      hintTimeout = setTimeout(function() {
-        $hint.animate({opacity: "show", marginLeft: "10"}, "slow");
-      }, 1000);
+      hintTimeout = setTimeout(hintAppear.bind(this), 1000);
     },
 
       function() {
         clearTimeout(hintTimeout);
-        $(this).next('.form__span').animate({opacity: "hide", marginLeft: "40"}, "fast");
+        hintDisappear.call(this);
       });
 
     $('.form__button').click(function(event) {
