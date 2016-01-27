@@ -1,0 +1,76 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
+
+body
+{
+  font-family: Verdana, sans-serif;
+  background: #1a1a1a;
+}
+
+.timer-heading
+{
+  text-align: center;
+  color: #00a9ff;
+}
+
+.body-wrapper
+{
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.timer-wrapper
+{
+  width: 510px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.timer-screen
+{
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.timer-screen__numbers
+{
+  float: left;
+  font-size: 96px;
+  color: #898989;
+  line-height: 90px;
+}
+
+.timer-screen__numbers--miliseconds
+{
+  font-size: 24px;
+  line-height: 43px;
+}
+
+.button-start
+{
+  float: left;
+  width: 220px;
+}
+
+.button-pause
+{
+  float: left;
+  width: 220px;
+}
+
+.button-disappear
+{
+  display: none;
+}
+
+.button-clear
+{
+  float: right;
+  width: 220px;
+}

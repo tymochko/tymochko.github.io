@@ -145,7 +145,7 @@ a {
   width: 123px;
   background-color: #666666;
   border: 1px solid #000000;
-  border-width: 0 0 1px 0;  
+  border-width: 0 0 1px 0;
 }
 .ou:after {
   left: 295px;
@@ -154,7 +154,7 @@ a {
 .form {
   margin: 0 auto;
 }
-input {
+.form__input {
   background: #000;
   /* For some reason height is adding to current height and width is lisghtly wider */
   width: 276px;
@@ -164,27 +164,27 @@ input {
   border-bottom: 1px solid #494949;
   color: #ccc;
 }
-input:focus {
+.form__input:focus {
   background-color: #1b5288;
   outline: 0;
   border-bottom: 1px solid #689bcc;
   box-shadow: 0 0 9px 3px #4d88b0, inset 0 0 5px 2px rgba(29, 26, 22, 0.2), inset 0 0 2px rgba(0, 0, 0, 0.1);
 }
-input[type="checkbox"] {
+.newsletter__checkbox {
   width: 13px;
   margin: 20px 0 23px -41px;
 }
 .createAccount {
-  width: auto; 
+  width: auto;
   margin: 0 0 20px;
   padding: 9px 20px;
-  font-size: 14px; 
+  font-size: 14px;
   background: linear-gradient(to top, rgba(46,122,196,1) 0%,rgba(81,177,220,1) 100%);
   box-shadow: inset 0px 1px 1px rgba(103,198,230,0.6);
   border: 1px solid rgb(66, 153, 210);
   /*border-image: linear-gradient(to top, rgb(66, 153, 210) 0%, rgb(101, 168, 228) 100%); It's overlaping border-radius*/
   border-radius: 2px;
-  color: #fff; 
+  color: #fff;
   cursor: pointer;
 }
 .policy {
