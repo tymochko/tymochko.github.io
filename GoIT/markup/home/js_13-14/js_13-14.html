@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework Javascript 13-14</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/tmpl.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <script type="text/template" id="test">
+    <div class="heading"><%= heading %></div>
+    <form method="get">
+        <ul class="listGeneral">
+            <li class="listItem">1. <%= question1 %>
+                <ul class="listChecklist">
+                    <li class="listItemHolder">
+                        <input name="answerCheckbox" class="listItemCheckbox" type="checkbox" value="answer11" id="answer11">
+                        <label for="answer11" class="listItemLabel"><%= answer11 %><br></label>
+                    </li>
+                    <li class="listItemHolder">
+                        <input name="answerCheckbox" class="listItemCheckbox" type="checkbox" value="answer12" id="answer12">
+                        <label for="answer12" class="listItemLabel"><%= answer12 %><br></label>
+                    </li>
+                    <li class="listItemHolder">
+                        <input name="answerCheckbox" class="listItemCheckbox" type="checkbox" value="answer13" id="answer13">
+                        <label for="answer13" class="listItemLabel"><%= answer13 %><br></label>
+                    </li>
+                </ul>
+            </li>
+            <li class="listItem">2. <%= question2 %>
+                <ul class="listChecklist">
+                    <li class="listItemHolder">
+                        <input name="answerCheckbox" class="listItemCheckbox" type="checkbox" value="answer21" id="answer21">
+                        <label for="answer21" class="listItemLabel"><%= answer21 %><br></label>
+                    </li>
+                    <li class="listItemHolder">
+                        <input name="answerCheckbox" class="listItemCheckbox" type="checkbox" value="answer22" id="answer22">
+                        <label for="answer22" class="listItemLabel"><%= answer22 %><br></label>
+                    </li>
+                    <li class="listItemHolder">
+                        <input name="answerCheckbox" class="listItemCheckbox" type="checkbox" value="answer23" id="answer23">
+                        <label for="answer23" class="listItemLabel"><%= answer23 %><br></label>
+                    </li>
+                </ul>
+            </li>
+            <li class="listItem">3. <%= question3 %>
+                <ul class="listChecklist">
+                    <li class="listItemHolder">
+                        <input name="answerCheckbox" class="listItemCheckbox" type="checkbox" value="answer31" id="answer31">
+                        <label for="answer31" class="listItemLabel"><%= answer31 %><br></label>
+                    </li>
+                    <li class="listItemHolder">
+                        <input name="answerCheckbox" class="listItemCheckbox" type="checkbox" value="answer32" id="answer32">
+                        <label for="answer32" class="listItemLabel"><%= answer32 %><br></label>
+                    </li>
+                    <li class="listItemHolder">
+                        <input name="answerCheckbox" class="listItemCheckbox" type="checkbox" value="answer33" id="answer33">
+                        <label for="answer33" class="listItemLabel"><%= answer33 %><br></label>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <input type="submit" value="<%= submitValue %>" class="submit">
+    </form>
+    </script>
+    <div class="popup-disable" id="popup">
+        <div class="popup__window">
+            <h3 class="popup__heading">Ваш результат:</h3>
+            <p class="popup__message"></p>
+            <a class="popup__button" href="#close">Закрити</a>
+        </div>
+    </div>
+</body>
+</html>

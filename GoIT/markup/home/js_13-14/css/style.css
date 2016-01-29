@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.heading {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 0 0 271px;
+    padding-top: 19px;
+    letter-spacing: -.8px;
+}
+
+.listGeneral {
+  margin: 47px 0 0 97px;
+  list-style-type: none;
+}
+
+.listItem {
+  font-size: 18px;
+  letter-spacing: .3px;
+}
+
+.listChecklist {
+  margin: 16px 24px;
+  list-style-type: none;
+}
+
+.listItemCheckbox {
+  width: 18px;
+  height: 18px;
+  box-shadow: inset 0 0 0 2px black;
+  cursor: pointer;
+}
+
+.listItemLabel {
+  font-size: 16px;
+  margin: 0 0 0 7px;
+  letter-spacing: .1px;
+  cursor: pointer;
+}
+
+.submit {
+  font-size: 20px;
+  margin: 32px 256px;
+  padding: 13px 41px;
+  letter-spacing: -.7px;
+  border: 1px solid black;
+  background: #5caed1;
+  cursor: pointer;
+}
+
+.popup-disable {
+    display: none;
+}
+
+.popup-enable {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(12, 50, 86, 0.5);
+    opacity: 0;
+}
+
+.popup__window {
+    width: 450px;
+    height: 200px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 0 30px 10px #4C4C4C;
+    margin: 0 auto;
+    margin-top: -500px;
+    opacity: 0;
+}
+
+.popup__heading {
+    padding: 20px;
+    border-bottom: 1px solid #4C4C4C;
+}
+
+.popup__message {
+    padding: 20px;
+    border-bottom: 1px solid #4C4C4C;
+}
+
+.popup__button {
+    padding: 10px 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #0c739f;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    margin-top: 18px;
+    width: 60px;
+    text-decoration: none;
+}
+
+.popup__button:hover {
+    background-color: #929f93;
+}
