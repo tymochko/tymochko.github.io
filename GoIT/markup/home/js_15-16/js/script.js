@@ -3,7 +3,9 @@
 $(function(){
 
     $('.search__form').submit(function(){
-
+      
+        $('ul').remove();
+        
         var urlFull = 'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&key=ABQIAAAACKQaiZJrS0bhr9YARgDqUxQBCBLUIYB7IF2WaNrkYqF0tBovNBQFDtM_KNtb3xQxWff2mI5hipc3lg&rsz=large&q='+ encodeURIComponent($('#textId').val()) + '&callback=GoogleCallback&context=?';
 
         $.ajax({
@@ -22,7 +24,13 @@ $(function(){
                             '<p class="val__content">'+ val.content + '</p>');
                     }
                 );
-            }
+            },
+            
+            error: function(XMLHttpRequest, textStatus, errorThrown) { 
+                alert("Status: " + textStatus);
+                alert("Error: " + errorThrown); 
+            } 
+            
         });
         return false;
     });
