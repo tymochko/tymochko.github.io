@@ -1,4 +1,4 @@
-$(function($) {
+(function($) {
     var leftUIEl = $('.carousel-arrow-left');
     var rightUIEl = $('.carousel-arrow-right');
     var elementsList = $('.carousel-list');

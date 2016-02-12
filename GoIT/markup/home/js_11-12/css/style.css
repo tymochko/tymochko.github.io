@@ -1,44 +1,113 @@
-.carousel-hider {
-    width: 600px;
+.slider__wrapper {
+    width: 800px;
+    margin: 0 auto;
     overflow: hidden;
-    float: left;
+    border-bottom: 1px solid #000;
 }
 
-.carousel-list {    
-    list-style: none;
-    width: 10000px;
-    padding: 0;
-    position: relative;
+.carousel-hider {
+width: 600px;
+overflow: hidden;
+float: left;
 }
- 
+
+.carousel-list {
+list-style: none;
+width: 10000px;
+padding: 0;
+position: relative;
+}
+
 .carousel-element {
-    display: block;
-    margin-right: 25px;
-    float: left;
+display: block;
+margin-right: 25px;
+float: left;
 }
- 
+
 .carousel-element img {
-    max-width: 100px;
+max-width: 100px;
 }
 
 .carousel-arrow-left, .carousel-arrow-right {
-    float: left;
-    display: block;
-    border: 1px solid grey;
-    background-color: lightgrey;
-    padding: 5px;
-    margin-top: 50px;
+float: left;
+display: block;
+border: 1px solid grey;
+background-color: lightgrey;
+padding: 5px;
+margin-top: 50px;
 }
- 
+
 .carousel-arrow-left:hover, .carousel-arrow-right:hover {
-    cursor: pointer;
-    background-color: grey;
+cursor: pointer;
+background-color: grey;
 }
- 
+
 .carousel-arrow-left {
-    margin-right: 25px;
+margin-right: 25px;
 }
- 
+
 .carousel-arrow-right {
-    margin-left: 25px;
+margin-left: 25px;
+}
+
+.cv__wrapper {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.container {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.heading .container {
+    text-align: center;
+    border-bottom: 3px solid black;
+}
+
+.heading h1 {
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.heading img {
+    height:200px;
+    text-align: center;
+}
+
+.heading p {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.motivation .container {
+    border-bottom: 2px solid #c0c0c0;
+}
+
+.motivation h3 {
+    margin: 0;
+    padding: 20px;
+}
+
+.contacts .container {
+    padding: 20px;
+    border-bottom: 2px solid #c0c0c0;
+}
+.contacts p, a {
+    padding: 0 0 5px 20px;
+    margin: 0;
+}
+
+.contacts .container p:nth-child(2) {
+    margin-bottom: 30px;
+}
+
+.feedback .container {
+    padding: 20px 0 50px;
+}
+
+.feedback p {
+    padding: 0 0 5px 20px;
+    margin: 0;
 }

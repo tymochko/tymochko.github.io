@@ -1,60 +1,30 @@
 $(function() {
-  
-  var html = $('#cv').html();
-  var data = {
-    title: 'Hello'
-  };
 
-  //
-  //var heading = [
-  //  {
-  //    h1: 'Yuri Tymochko',
-  //    img: 'img/avatar 03.jpg',
-  //    p: '3D CAD Designer with over 8 years experience'
-  //  }
-  //];
+    var html = $('#cv').html();
 
-  //var motivation = [
-  //  {
-  //    h3: 'I want to learn Frontend in order to:'
-  //  },
-  //
-  //  {
-  //    li: 'Work in a team'
-  //  },
-  //
-  //  {
-  //    li: 'Grow both in career and income'
-  //  },
-  //
-  //  {
-  //    li: 'Feel an opportunity to work and live anywhere'
-  //  }
-  //];
-  //
-  //var contacts = [
-  //  {
-  //    p: 'My cell phone number'
-  //  },
-  //
-  //  {
-  //    p: '380932938538'
-  //  },
-  //
-  //  {
-  //    p: 'My Facebook profile'
-  //  },
-  //
-  //  {
-  //    a: 'https://www.facebook.com/yurii.tymochko'
-  //  }
-  //];
 
-  //var content = tmpl(html, {
-  //  data: heading
-  //});
-  //
-  var content = tmpl(html, data);
+    var data = {
+        name: 'Yuri Tymochko',
+        portrait: 'src="img/avatar 03.jpg"',
+        about: '3D CAD Designer with over 8 years experience',
 
-  $('body').append(content);
+        motivationHeading: 'I want to learn Frontend in order to:',
+        motivation1: 'Work in a team',
+        motivation2: 'Grow both in career and income',
+        motivation3: 'Feel an opportunity to work and live anywhere',
+
+        contact1Heading: 'My cell phone number',
+        cellNumber: '380932938538',
+        contact2Heading: 'My Facebook profile',
+        socialLink: 'href="https://www.facebook.com/yurii.tymochko"',
+        socialName: 'Facebook profile',
+
+        feedbackHeading: 'My feedback:',
+        feedbackParagraph: 'I am very upset with GoIT customer service'
+    };
+
+    var content = tmpl(html, data);
+
+    $('body').append(content);
+
 });
