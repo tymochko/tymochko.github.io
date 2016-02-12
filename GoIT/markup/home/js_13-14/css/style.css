@@ -44,6 +44,19 @@ body {
   cursor: pointer;
 }
 
+.warning-disable {
+    display: none;
+    width: 100%;
+    position: absolute;
+    padding-left: 160px;
+    color: red;
+    background-color: yellow;
+}
+
+.warning-enable {
+    display: block;
+}
+
 .submit {
   font-size: 20px;
   margin: 32px 256px;

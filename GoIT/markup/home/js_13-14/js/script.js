@@ -1,6 +1,6 @@
 'use strict';
 
-$(function() {
+$(function () {
     var html = $('#test').html();
 
     var data = {
@@ -20,6 +20,8 @@ $(function() {
         answer31: 'Це команда браузерові виконувати даний код в режимі налагодження',
         answer32: 'Ця команда зупиняє виконання коду і відкриває режим налагодження в браузері',
         answer33: 'Ця команда починає виконувати код з поточного місця',
+        
+        warning: '! Необхідно обрати одну правильну відповідь для кожного запитання !',
 
         submitValue: 'Перевірити мої результати'
     };
@@ -38,10 +40,19 @@ $(function() {
     var popupData = {
         popupMessage: 'Усі відповіді правильні. Вітаємо.'
     };
+    
+    $('label, input').on('click', function() {
+        $('.warning-disable').removeClass('warning-enable');
+    });
 
     $('form').submit(function( event ) {
         event.preventDefault();
         var $user = $( this ).serializeArray();
+        
+        if ($user.length < 3 || $user.length > 4) {
+            $('.warning-disable').addClass('warning-enable');
+            return;
+        };
 
         var val1 = $user[0].value;
         var val2 = $user[1].value;
@@ -57,6 +68,8 @@ $(function() {
 
             objPopupData = JSON.parse(objPopupData);
             var contentPopupMessage = objPopupData.popupMessage;
+        } else if (val1 == undefined || val2 == undefined || val3 == undefined) {
+            console.log('Ooops');
         } else {
             contentPopupMessage = 'Нажаль не вірно. Спробуйте ще.';
         };
