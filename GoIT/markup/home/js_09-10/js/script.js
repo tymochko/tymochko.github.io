@@ -1,15 +1,9 @@
 $(function() {
   //jCarousel code STARTS HERE
   $('.jcarousel').jcarousel({
-    // Configuration goes here
-  });
-
-  $('.jcarousel').jcarousel({
     animation: {
       duration: 400,
-      easing:   'linear',
-      complete: function() {
-      }
+      easing: 'linear'
     }
   });
 
@@ -27,10 +21,6 @@ $(function() {
     }
   });
   //jCarousel code ENDS HERE
-
-  //custom Select code STARTS HERE
-  $('select.styled').customSelect();
-  //custom Select code ENDS HERE
 
   //Three-level menu with animation STARTS HERE
   $( '.dropdown' ).hover(
